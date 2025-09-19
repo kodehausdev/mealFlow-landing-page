@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-app-screenshot",
+      "description": "A family laughing and preparing a healthy meal together in a bright, modern kitchen.",
+      "imageUrl": "/images/hero.jpg",
+      "imageHint": "family cooking"
+    },
+    {
+      "id": "feature-list-image",
+      "description": "A top-down view of a beautifully arranged, colorful salad on a wooden table.",
+      "imageUrl": "/images/features.jpg",
+      "imageHint": "healthy food"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "A portrait of a smiling person.",
+      "imageUrl": "https://picsum.photos/seed/1/40/40",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "A portrait of a smiling person.",
+      "imageUrl": "https://picsum.photos/seed/2/40/40",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "A portrait of a smiling person.",
+      "imageUrl": "https://picsum.photos/seed/3/40/40",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "A portrait of a smiling person.",
+      "imageUrl": "https://picsum.photos/seed/4/40/40",
+      "imageHint": "person portrait"
+    }
+  ]
+}
