@@ -60,8 +60,8 @@ export default function Hero() {
         <div
           className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-accent via-primary to-accent opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] animate-spin-slow"
           style={{
-        clipPath:
-          'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            clipPath:
+              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
         />
       </div>
@@ -71,18 +71,18 @@ export default function Hero() {
         const IconComponent = word.icon;
         return (
           <div
-        key={word.text}
-        className={`absolute opacity-20 animate-float ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}
-        style={{
-          top: `${15 + (index * 8)}%`,
-          left: `${5 + (index * 15)}%`,
-          animationDelay: `${word.delay}s`,
-        }}
+            key={word.text}
+            className={`absolute opacity-20 animate-float ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}
+            style={{
+              top: `${15 + (index * 8)}%`,
+              left: `${5 + (index * 15)}%`,
+              animationDelay: `${word.delay}s`,
+            }}
           >
-        <div className="flex items-center gap-2 text-primary">
-          <IconComponent className="w-5 h-5" />
-          <span className="font-semibold text-base">{word.text}</span>
-        </div>
+            <div className="flex items-center gap-2 text-primary">
+              <IconComponent className="w-5 h-5" />
+              <span className="font-semibold text-base">{word.text}</span>
+            </div>
           </div>
         );
       })}
@@ -123,39 +123,41 @@ export default function Hero() {
                   <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
                     love
                   </span>
-                  <Heart className="absolute -top-2 -right-8 w-6 h-6 text-red-500 animate-pulse" />
+                  <span className="hidden sm:inline-block">
+                    <Heart className="absolute -top-2 -right-8 w-6 h-6 text-red-500 animate-pulse" />
+                  </span>
                 </span>
               </span>
             </h1>
 
-            <p className="mt-8 text-xl leading-9 text-muted-foreground max-w-3xl mx-auto">
-            MealFlow is your soon-to-launch meal companion. It learns your household's meal patterns to make 
-            <span className="font-semibold text-primary"> smart, personalized suggestions</span>, 
-            so you can spend less time planning and more time 
-            <span className="font-semibold text-accent"> enjoying food together</span>.
+            {/* Description */}
+            <p className={`mt-8 text-xl leading-9 text-muted-foreground max-w-3xl mx-auto transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
+              MealFlow learns your household's meal patterns to make{' '}
+              <span className="font-semibold text-primary">smart, personalized suggestions</span>, 
+              so you can spend less time planning and more time{' '}
+              <span className="font-semibold text-accent">enjoying food together</span>.
             </p>
 
-
             {/* CTA Buttons */}
-            <div className={`mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
-              <Link href="#waitlist" className="group">
-                <Button size="lg" className="relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 group-hover:-translate-y-1">
-                  <span className="relative z-10 flex items-center gap-2">
-                    <Sparkles className="w-5 h-5" />
+            <div className={`mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
+              <Link href="#waitlist" className="group w-full sm:w-auto">
+                <Button size="lg" className="relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 group-hover:-translate-y-1 w-full sm:w-auto">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
                     Join the Waitlist
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"></div>
                 </Button>
               </Link>
               
-              <Link href="#features" className="group">
-                <Button size="lg" variant="outline" className="relative overflow-hidden border-2 border-primary/20 hover:border-primary/40 bg-background/50 backdrop-blur-sm px-8 py-4 text-lg font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 group-hover:-translate-y-1">
-                  <span className="flex items-center gap-2 text-foreground group-hover:text-primary transition-colors duration-200">
-                    <Play className="w-5 h-5" />
+              <Link href="#features" className="group w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="relative overflow-hidden border-2 border-primary/20 hover:border-primary/40 bg-background/50 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 group-hover:-translate-y-1 w-full sm:w-auto">
+                  <span className="flex items-center justify-center gap-2 text-foreground group-hover:text-primary transition-colors duration-200">
+                    <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                     Learn more
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-200" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
@@ -170,7 +172,7 @@ export default function Hero() {
                   <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full border-2 border-background"></div>
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full border-2 border-background"></div>
                 </div>
-                <span>Be among the first families to try MealFlow</span>
+                <span>Join 1000+ families already planning</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-red-500" />
