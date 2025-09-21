@@ -172,7 +172,7 @@ export default function Hero() {
                   <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-green-600 rounded-full border-2 border-background"></div>
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full border-2 border-background"></div>
                 </div>
-                <span>Join 1000+ families already planning</span>
+                <span>Be among the first families to try MealFlow</span>
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-red-500" />
